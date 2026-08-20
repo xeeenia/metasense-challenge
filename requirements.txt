@@ -1,0 +1,13 @@
+# Deliberately small. Everything in this repository runs on the scientific
+# Python core -- there is no deep-learning framework, because Q4's neural
+# network, its int8 quantiser and its integer inference engine are written out
+# in NumPy (see q4_edge_ml/nn.py for why).
+#
+# Versions are lower bounds, not pins: nothing here uses a recent API and
+# pinning would create install failures on machines that already have working,
+# slightly different versions.
+
+numpy>=1.24
+scipy>=1.10
+scikit-learn>=1.2
+matplotlib>=3.6

@@ -1,0 +1,14 @@
+# Datasets are fetched by download_data.py, not committed. They are ~12 MB and
+# belong to their original authors; the download script is the reproducible
+# artefact, not a copy of somebody else's data in our history.
+data/
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store
+
+# outputs/ is deliberately NOT ignored: the brief asks for result artefacts to
+# be committed so they can be read even if a reviewer's environment differs.

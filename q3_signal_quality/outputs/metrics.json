@@ -1,0 +1,357 @@
+{
+  "tolerance_bpm": 5.0,
+  "auc_margin_vs_best_baseline": {
+    "baseline": "skewness",
+    "mean": 0.12241879790804668,
+    "lo": 0.04867160313854357,
+    "hi": 0.1967300056530428
+  },
+  "troika": {
+    "n_windows": 1726,
+    "n_subjects": 11,
+    "usable_rate": 0.4988,
+    "median_abs_error_bpm": 5.147,
+    "auc": {
+      "ours": 0.8809,
+      "skewness": 0.7617,
+      "autocorrelation": 0.6065,
+      "zero_crossing": 0.4868
+    },
+    "threshold_transfer": {
+      "ours_adaptive": {
+        "in_domain": 0.8213011298608636,
+        "transferred": 0.8213011298608636,
+        "drop": 0.0,
+        "n_folds": 11
+      },
+      "skewness": {
+        "in_domain": 0.7129873702146482,
+        "transferred": 0.6571776050464551,
+        "drop": 0.05580976516819314,
+        "n_folds": 11
+      },
+      "autocorrelation": {
+        "in_domain": 0.5894731271183337,
+        "transferred": 0.565547282922573,
+        "drop": 0.023925844195760715,
+        "n_folds": 11
+      },
+      "zero_crossing": {
+        "in_domain": 0.5254832898630666,
+        "transferred": 0.4923356431555146,
+        "drop": 0.03314764670755199,
+        "n_folds": 11
+      }
+    },
+    "per_record": {
+      "01_TYPE01": {
+        "subject": "S01",
+        "n_beats": 494,
+        "accept_fraction": 0.5283,
+        "threshold": 0.4663,
+        "threshold_mode": "mixture"
+      },
+      "02_TYPE02": {
+        "subject": "S02",
+        "n_beats": 370,
+        "accept_fraction": 0.3297,
+        "threshold": 0.3945,
+        "threshold_mode": "mixture"
+      },
+      "03_TYPE02": {
+        "subject": "S03",
+        "n_beats": 452,
+        "accept_fraction": 0.4624,
+        "threshold": 0.6114,
+        "threshold_mode": "mixture"
+      },
+      "04_TYPE01": {
+        "subject": "S04",
+        "n_beats": 255,
+        "accept_fraction": 0.4118,
+        "threshold": 0.6027,
+        "threshold_mode": "mixture"
+      },
+      "04_TYPE02": {
+        "subject": "S04",
+        "n_beats": 614,
+        "accept_fraction": 0.6417,
+        "threshold": 0.6957,
+        "threshold_mode": "mixture"
+      },
+      "05_TYPE02": {
+        "subject": "S05",
+        "n_beats": 681,
+        "accept_fraction": 0.8223,
+        "threshold": 0.68,
+        "threshold_mode": "mixture"
+      },
+      "06_TYPE02": {
+        "subject": "S06",
+        "n_beats": 613,
+        "accept_fraction": 0.522,
+        "threshold": 0.7617,
+        "threshold_mode": "mixture"
+      },
+      "07_TYPE02": {
+        "subject": "S07",
+        "n_beats": 592,
+        "accept_fraction": 0.6436,
+        "threshold": 0.7912,
+        "threshold_mode": "mixture"
+      },
+      "08_TYPE02": {
+        "subject": "S08",
+        "n_beats": 437,
+        "accept_fraction": 0.627,
+        "threshold": 0.5428,
+        "threshold_mode": "mixture"
+      },
+      "10_TYPE02": {
+        "subject": "S10",
+        "n_beats": 453,
+        "accept_fraction": 0.4216,
+        "threshold": 0.4924,
+        "threshold_mode": "mixture"
+      },
+      "11_TYPE02": {
+        "subject": "S11",
+        "n_beats": 645,
+        "accept_fraction": 0.631,
+        "threshold": 0.686,
+        "threshold_mode": "mixture"
+      },
+      "12_TYPE02": {
+        "subject": "S12",
+        "n_beats": 759,
+        "accept_fraction": 0.5428,
+        "threshold": 0.7884,
+        "threshold_mode": "mixture"
+      }
+    }
+  },
+  "ablation": {
+    "combine_mode": {
+      "min": 0.8809,
+      "product": 0.8895,
+      "geometric": 0.8057,
+      "mean": 0.712
+    },
+    "single_component": {
+      "morphology": 0.7531,
+      "rhythm": 0.6054,
+      "amplitude": 0.5322,
+      "subharmonic": 0.8705
+    }
+  },
+  "causal_filter": {
+    "zero_phase": 0.8809,
+    "causal": 0.8543
+  },
+  "welltory": {
+    "n_recordings": 21,
+    "channels_selected": {
+      "R": 12,
+      "G": 9
+    },
+    "mae_gated_bpm": 1.361,
+    "mae_ungated_bpm": 1.663,
+    "per_record": [
+      {
+        "record": "subject_01",
+        "channel": "R",
+        "n_beats": 106,
+        "accept_fraction": 0.689,
+        "ref_bpm": 54.46,
+        "gated_bpm": 56.25,
+        "ungated_bpm": 60.0
+      },
+      {
+        "record": "subject_02",
+        "channel": "R",
+        "n_beats": 94,
+        "accept_fraction": 1.0,
+        "ref_bpm": 82.84,
+        "gated_bpm": 81.82,
+        "ungated_bpm": 81.82
+      },
+      {
+        "record": "subject_03",
+        "channel": "R",
+        "n_beats": 98,
+        "accept_fraction": 1.0,
+        "ref_bpm": 82.61,
+        "gated_bpm": 81.82,
+        "ungated_bpm": 81.82
+      },
+      {
+        "record": "subject_04",
+        "channel": "R",
+        "n_beats": 95,
+        "accept_fraction": 0.905,
+        "ref_bpm": 74.94,
+        "gated_bpm": 72.0,
+        "ungated_bpm": 72.0
+      },
+      {
+        "record": "subject_05",
+        "channel": "R",
+        "n_beats": 94,
+        "accept_fraction": 1.0,
+        "ref_bpm": 73.48,
+        "gated_bpm": 75.0,
+        "ungated_bpm": 75.0
+      },
+      {
+        "record": "subject_06",
+        "channel": "R",
+        "n_beats": 93,
+        "accept_fraction": 0.86,
+        "ref_bpm": 72.62,
+        "gated_bpm": 72.0,
+        "ungated_bpm": 72.0
+      },
+      {
+        "record": "subject_07",
+        "channel": "G",
+        "n_beats": 75,
+        "accept_fraction": 0.307,
+        "ref_bpm": 71.81,
+        "gated_bpm": 69.23,
+        "ungated_bpm": 64.29
+      },
+      {
+        "record": "subject_08",
+        "channel": "R",
+        "n_beats": 82,
+        "accept_fraction": 0.793,
+        "ref_bpm": 72.39,
+        "gated_bpm": 73.47,
+        "ungated_bpm": 72.0
+      },
+      {
+        "record": "subject_09",
+        "channel": "G",
+        "n_beats": 94,
+        "accept_fraction": 0.894,
+        "ref_bpm": 69.04,
+        "gated_bpm": 69.23,
+        "ungated_bpm": 69.23
+      },
+      {
+        "record": "subject_10",
+        "channel": "R",
+        "n_beats": 101,
+        "accept_fraction": 1.0,
+        "ref_bpm": 67.61,
+        "gated_bpm": 66.67,
+        "ungated_bpm": 66.67
+      },
+      {
+        "record": "subject_11",
+        "channel": "G",
+        "n_beats": 81,
+        "accept_fraction": 0.679,
+        "ref_bpm": 69.79,
+        "gated_bpm": 72.0,
+        "ungated_bpm": 69.23
+      },
+      {
+        "record": "subject_12",
+        "channel": "R",
+        "n_beats": 87,
+        "accept_fraction": 1.0,
+        "ref_bpm": 79.23,
+        "gated_bpm": 81.82,
+        "ungated_bpm": 81.82
+      },
+      {
+        "record": "subject_13",
+        "channel": "R",
+        "n_beats": 93,
+        "accept_fraction": 0.806,
+        "ref_bpm": 79.76,
+        "gated_bpm": 78.26,
+        "ungated_bpm": 78.26
+      },
+      {
+        "record": "subject_14",
+        "channel": "G",
+        "n_beats": 90,
+        "accept_fraction": 1.0,
+        "ref_bpm": 68.52,
+        "gated_bpm": 69.23,
+        "ungated_bpm": 69.23
+      },
+      {
+        "record": "subject_15",
+        "channel": "R",
+        "n_beats": 98,
+        "accept_fraction": 1.0,
+        "ref_bpm": 70.01,
+        "gated_bpm": 69.23,
+        "ungated_bpm": 69.23
+      },
+      {
+        "record": "subject_16",
+        "channel": "G",
+        "n_beats": 96,
+        "accept_fraction": 1.0,
+        "ref_bpm": 64.52,
+        "gated_bpm": 64.29,
+        "ungated_bpm": 64.29
+      },
+      {
+        "record": "subject_17",
+        "channel": "G",
+        "n_beats": 98,
+        "accept_fraction": 0.918,
+        "ref_bpm": 66.08,
+        "gated_bpm": 64.29,
+        "ungated_bpm": 64.29
+      },
+      {
+        "record": "subject_18",
+        "channel": "G",
+        "n_beats": 95,
+        "accept_fraction": 1.0,
+        "ref_bpm": 68.1,
+        "gated_bpm": 69.23,
+        "ungated_bpm": 69.23
+      },
+      {
+        "record": "subject_19",
+        "channel": "R",
+        "n_beats": 91,
+        "accept_fraction": 1.0,
+        "ref_bpm": 74.15,
+        "gated_bpm": 75.0,
+        "ungated_bpm": 75.0
+      },
+      {
+        "record": "subject_20",
+        "channel": "G",
+        "n_beats": 96,
+        "accept_fraction": 0.729,
+        "ref_bpm": 87.75,
+        "gated_bpm": 90.0,
+        "ungated_bpm": 90.0
+      },
+      {
+        "record": "subject_21",
+        "channel": "G",
+        "n_beats": 93,
+        "accept_fraction": 0.946,
+        "ref_bpm": 86.78,
+        "gated_bpm": 85.71,
+        "ungated_bpm": 85.71
+      }
+    ]
+  },
+  "synthetic": {
+    "n_beats": 1939,
+    "corrupt_fraction": 0.1527,
+    "auc": 0.8909
+  },
+  "runtime_seconds": 215.8
+}
