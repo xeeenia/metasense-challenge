@@ -222,8 +222,7 @@ disguise.
 
 ## On the use of AI assistants
 
-I used Claude (Anthropic) throughout this exercise, and it would be easier to
-under-describe that than to describe it accurately, so:
+I used Claude (Anthropic) throughout this exercise, so I want to be explicit about how it was used:
 
 - **Scoping and background research.** Locating candidate public datasets, and
   reading around cuffless-BP and PPG signal-quality literature to work out which
