@@ -8,7 +8,7 @@ model into a microcontroller budget)
 ## Quick start
 
 ```bash
-git clone <this repo> && cd metasense-challenge
+git clone https://github.com/xeeenia/metasense-challenge.git && cd metasense-challenge
 python -m venv .venv && source .venv/bin/activate     # optional
 pip install -r requirements.txt
 
