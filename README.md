@@ -224,28 +224,13 @@ disguise.
 
 I used Claude (Anthropic) throughout this exercise, so I want to be explicit about how it was used:
 
-- **Scoping and background research.** Locating candidate public datasets, and
-  reading around cuffless-BP and PPG signal-quality literature to work out which
-  approaches were worth attempting in the available time.
-- **Code.** Substantial parts of the implementation were drafted with assistance
-  and then reviewed, corrected and in several places rewritten by me. The
-  `quantize.py` integer inference path and the `validate.py` experiment design went
-  through the most revision.
-- **Prose.** The READMEs were drafted with assistance and edited by me.
+* **Scoping and background research.** Claude assisted with locating candidate public datasets and surveying cuffless-BP and PPG signal-quality literature to help identify approaches worth attempting within the available time.
+* **Implementation and debugging.** Substantial parts of the code were drafted with assistance, then reviewed, tested, corrected, and in several places rewritten by me. The `quantize.py` integer-inference path and the `validate.py` experiment design went through the most iteration.
+* **Prose.** The READMEs were drafted with assistance and then edited and reviewed by me.
 
-What was *not* delegated: the method design for Q3, the decision to build the
-validation around threshold transfer rather than AUC, the choice of datasets and the
-reasoning about why TROIKA's exercise condition is the right stress test, the
-decision to write the network in NumPy, and every judgement about which results to
-report and how to characterise them.
+I made the final decisions on problem selection, methodology, dataset choice, validation strategy, model and implementation trade-offs, and how the results and limitations should be interpreted and reported. In particular, I chose Q3 and Q4 because they best match my machine-learning and data-science background, kept the validation subject-disjoint, and retained negative and failure-case results rather than presenting only favourable outcomes.
 
-Three of the bugs found during development are documented in the write-ups rather
-than quietly fixed, because how they were found is more informative than the final
-code: the autocorrelation `argmax` failure (period estimation returning 40 bpm for a
-120 bpm signal), the heart-rate estimator that spanned gaps left by rejected beats
-(which made the quality gate appear actively harmful), and the initial global
-template that averaged waveforms across a 90 bpm range. All three produced
-plausible-looking numbers before they were caught, which is the argument for the
-falsification-oriented validation in Q3.
+Several bugs found during development are documented in the write-ups rather than quietly removed, because the debugging process informed the final methodology. These include the autocorrelation `argmax` period-estimation failure, the heart-rate estimator spanning gaps left by rejected beats, and the initial global template averaging waveforms across a wide heart-rate range. Each produced plausible-looking results before being identified through inspection of intermediate outputs.
 
-I can walk through any line of this repository and say why it is there.
+I have reviewed the repository and the reasoning behind the major design choices, and I am prepared to walk through the method, validation design, results, and code during the interview.
+
